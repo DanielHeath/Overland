@@ -1,0 +1,20 @@
+
+<p>
+  <b>Name:</b>
+  <%=h @tile.name %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%=h @tile.image_url %>
+</p>
+
+
+<p>
+  <b>Description:</b>
+  <%=h @tile.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_map_tile_path(@map, @tile) %> |
+<%= link_to 'Back', map_tiles_path(@map) %>

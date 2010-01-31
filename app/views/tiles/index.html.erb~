@@ -1,0 +1,26 @@
+<h1>Listing tiles</h1>
+
+<table>
+  <tr>
+    <th>Map</th>
+    <th>Image url</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+
+<% @tiles.each do |tile| %>
+  <tr>
+    <td><%=h tile.map_id %></td>
+    <td><%=h tile.image_url %></td>
+    <td><%=h tile.name %></td>
+    <td><%=h tile.description %></td>
+    <td><%= link_to 'Show', [@map, tile] %></td>
+    <td><%= link_to 'Edit', edit_map_tile_path(@map, tile) %></td>
+    <td><%= link_to 'Destroy', tile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tile', new_map_tile_path(@map) %>
